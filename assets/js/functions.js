@@ -278,3 +278,24 @@ $( document ).ready(function() {
   transitionLabels();
 
 });
+
+// $(document).ready(function() {
+// 	$('.carousel').carousel();
+// });
+
+function downloadPDF() {
+  // Set the path to your PDF file
+  var pdfPath = 'Sameer Qarizada Resume v1.23.24.pdf';
+  
+  // Get the download link anchor tag by its ID
+  var downloadLink = document.getElementById('downloadLink');
+  
+  // Set the HREF attribute to the path of your PDF
+  downloadLink.setAttribute('href', pdfPath);
+  
+  // Optional: Set the download attribute to suggest a filename (same as the PDF or a custom name)
+  downloadLink.setAttribute('download', 'Sameer Qarizada Resume v1.23.24.pdf');
+  
+  // Simulate a click on the anchor tag to start the download
+  downloadLink.click();
+}

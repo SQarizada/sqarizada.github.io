@@ -934,10 +934,12 @@ body {
   }
 }
 
-.work h2 {
-  margin: 0 0 20px 0;
-  font-size: 30px;
-  text-align: center
+.work h3 {
+  position: relative;
+    z-index: 1000;
+    color: #ffffff;
+    font-size: 3em;
+    left: 45%;
 }
 
 .work--lockup {
@@ -1971,52 +1973,7 @@ body {
   margin-left: 5px;
 }
 
-/* * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
-*:focus {
-  outline: 0;
-}
-
-html {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-body {
-	background-color: #000000;
-}
-
-.carousel {
-	height: 700px;
-	perspective: 600px;
-	transform: translateY(-100px);
-}
-
-.carousel .carousel-item {
-	cursor: grab;
-	width: 400px;
-}
-
-.carousel .carousel-item:active {
-	cursor: grabbing;
-}
-
-.carousel .carousel-item img {
-	width: 100%;
-}
-
-.carousel .carousel-item h3 {
-	background-color: #ffffff;
-	color: #000000;
-	font-size: 2em;
-	font-weight: bold;
-	margin: -5px 0 0;
-	padding: 10px 5px;
-	text-align: center;
-} */
 
 .download-button {
   position: relative;
@@ -2283,8 +2240,18 @@ body {
 	display: block;
 	background-image: linear-gradient(180deg, rgba(60, 26, 229, 0) 0%, #3C1AE5 50%, rgba(60, 26, 229, 0) 100%);
 }
+#uniqueProjects {
+  position: relative;
+    z-index: 1000;
+    color: #ffffff;
+    font-size: 3em;
+    top: 42%;
+    left: 35%;
+}
 .circle-image {
   width: 100%;
   height: auto;
+  top: 50%;
+  left: 20%;
   border-radius: 50%; /* Make it round */
 }

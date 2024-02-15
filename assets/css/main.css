@@ -713,6 +713,8 @@ body {
 .intro--banner {
   position: relative;
   height: 475px;
+  width: 100%;
+
 }
 
 
@@ -2233,4 +2235,152 @@ body {
   left: 20%;
   border-radius: 50%;
   /* Make it round */
+}
+
+/* Skill Cards */
+.skills {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 900px;
+  max-width: 75%;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+}
+
+@media (max-width: 1180px) {
+  .skills {
+    max-width: 100%
+  }
+}
+@media (max-width: 600px) {
+  .skills--banner .card {
+    min-width: 200px; /* Smaller width for mobile devices */
+    margin-right: 0.5rem; /* Less margin to fit smaller screens */
+  }
+  .skills--banner .card .card-image img {
+    height: 100px; /* Smaller height for smaller screens */
+  }
+}
+.skills--banner {
+  position: relative;
+  height: 475px;
+}
+.skills--banner h1 {
+   position: relative;
+  margin: auto;
+  max-width: 50%;
+  text-align: center;
+  font-size: 68px;
+  font-weight: 900;
+  line-height: 1;
+  z-index: 1
+}
+.skills--banner .cards {
+  list-style: none;
+  margin: 0;
+  padding: .25rem;
+  background: #000000;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start; /* Keep only one justify-content property */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.skills--banner .cards.active {
+  background: #000000; /* Example adjustment for darken effect */
+  cursor: grab;
+}
+
+.skills--banner .cards.grabbing {
+  cursor: grabbing;
+}
+
+.skills--banner .cards.centered {
+  justify-content: center;
+}
+
+.skills--banner .cards::-webkit-scrollbar {
+  display: none;
+}
+
+/* Adjustments for .card to include your color scheme */
+.skills--banner .card {
+  width: 250px; /* Example fixed width; adjust as needed */
+  height: auto;
+  flex: 0 0 auto;
+  background: white; /* Card background */
+  border: 1px solid #ccc; /* Light border to start, can be adjusted */
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin-right: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  overflow: hidden;
+}
+
+.skills--banner .card-image img {
+  width: 100%; /* Make the image fill the container */
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.3s ease; /* Animation for the image */
+  display: block; /* Remove any extra space below the image */
+}
+
+.skills--banner .card:hover .card-image img {
+  transform: scale(1.1); /* Zoom in the image slightly on hover */
+}
+
+/* Hover effect for .card */
+.skills--banner .card:hover {
+  transform: translateY(-5px); /* Slight lift */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Increased shadow for depth */
+  border-color: #5D55FA; /* Example blue or purple for hover border, adjust as needed */
+}
+
+.skills--banner .card-content h3 {
+  margin-top: 0.5rem; /* Space between image and caption */
+  color: #4A4E69; /* Caption color, adjust as needed */
+}
+
+.skills--banner .card-content ul {
+  list-style-type: disc; /* Bullet style */
+  padding-left: 20px; /* Indent bullets */
+  margin-top: 0.5rem; /* Space between caption and list */
+}
+
+.skills--banner .card-content ul li {
+  color: #4A4E69; /* Text color, adjust as needed */
+}
+/* Additional styling for card content to match your color scheme */
+.skills--banner .card h3 {
+  color: #4A4E69; /* Dark blue, adjust as needed */
+}
+
+.skills--banner .card p {
+  color: #4A4E69; /* Keeping text color consistent with the title */
+}
+
+
+/* Adjusted .skills-container for demonstration */
+.skills--banner .skills-container {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  margin: 0 auto; /* Centers the container if it's a flex container */
 }

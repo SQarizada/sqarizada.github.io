@@ -1,5 +1,7 @@
 // @codekit-prepend "/vendor/hammer-2.0.8.js";
 
+
+
 $( document ).ready(function() {
 
   // DOMMouseScroll included for firefox support
@@ -20,6 +22,7 @@ $( document ).ready(function() {
           canScroll = true;
         }, 800);
         updateHelper(1);
+        updateCards(delta > 50 ? 1 : -1);
       }
       else if (delta < -50 && canScroll) {
         canScroll = false;
@@ -33,6 +36,19 @@ $( document ).ready(function() {
     }
 
   });
+
+  function updateCards(direction) {
+    var $cardsContainer = $('#cards-container');
+    var $cards = $cardsContainer.find('.card');
+    var $firstCard = $cards.first();
+    var $lastCard = $cards.last();
+
+    if (direction > 0) { // Scroll forward
+        $cardsContainer.append($firstCard); // Move the first card to the end
+    } else if (direction < 0) { // Scroll backward
+        $cardsContainer.prepend($lastCard); // Move the last card to the beginning
+    }
+}
 
   $('.side-nav li, .outer-nav li').click(function(){
 
